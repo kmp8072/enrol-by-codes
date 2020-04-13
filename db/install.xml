@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="enrol/codes/db" VERSION="20200410" COMMENT="XMLDB file for Moodle enrol/codes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="enrol_codes" COMMENT="Default comment for local_custom_api, please edit me">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="enrolid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="if this field is blank enroll code in this row is not used, if userid is here then corresponding enroll code is exhausted."/>
+        <FIELD NAME="enrol_code" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="enrol code for each user using which user enrolled into the course."/>
+        <FIELD NAME="generatorid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="userid having permission to generate code,has generated this code."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

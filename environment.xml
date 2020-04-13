@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<COMPATIBILITY_MATRIX>
+  <PLUGIN name="enrol_codes">
+    <PHP_EXTENSIONS>
+      <PHP_EXTENSION name="openssl" level="required">
+      	<FEEDBACK>
+      		<ON_ERROR message="dependency_failmessage" plugin="enrol_codes"/>
+            <ON_OK message="dependency_passed" plugin="enrol_codes"/>
+        </FEEDBACK>
+      </PHP_EXTENSION>
+    </PHP_EXTENSIONS>
+  </PLUGIN>
+</COMPATIBILITY_MATRIX>
